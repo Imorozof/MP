@@ -3,5 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("hello world")
+
+	var (
+		testVariable  = "Hello, world!"
+		testVariable2 = 23
+	)
+	fmt.Println(testVariable, ",", testVariable2)
 }
