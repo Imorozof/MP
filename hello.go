@@ -3,19 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	var (
-		i, a    int
-		b, c, d bool
-	)
-	a = 0
-	fmt.Scan(&i)
-	b = i%400 == a
-	c = i%4 == a
-	d = i%100 != a
-	switch {
-	case b == true || (c == true && d == true):
-		fmt.Println("YES")
-	default:
-		fmt.Println("NO")
+	var newNumber int8
+	for fmt.Scan(&newNumber); newNumber > 0; fmt.Scan(&newNumber) {
+		if newNumber < 10 {
+			continue
+		} else if newNumber >= 10 && newNumber <= 100 {
+			fmt.Println(newNumber)
+		} else if newNumber > 100 {
+			break
+		}
 	}
 }
